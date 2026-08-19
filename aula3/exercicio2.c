@@ -13,7 +13,7 @@ int main() {
         soma += numAtual;
 
         if (maior < numAtual) {
-                maior = numAtual;
+            maior = numAtual;
         }
 
         if (menor > numAtual) {
@@ -23,6 +23,6 @@ int main() {
 
     }
 
-    printf("O maior número é o %f, o menor número é o %f, a soma é %f e a média é %f", maior, menor, soma, soma / 10);
+    printf("O maior nÃºmero Ã© o %f, o menor nÃºmero Ã© o %f, a soma Ã© %f e a mÃ©dia Ã© %f", maior, menor, soma, soma / 10);
     return 0;
 }
