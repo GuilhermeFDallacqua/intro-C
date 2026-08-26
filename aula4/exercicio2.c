@@ -8,11 +8,11 @@ int main() {
     int lados = 0;
     float perimetro, ladoAtual = 0;
 
-    printf("Digite quantos lados tem seu polÌgono: ");
+    printf("Digite quantos lados tem seu pol√≠gono: ");
     scanf("%d", &lados);
 
     if (lados < 3) {
-        printf("Quantidade de lados errada, impossivel um polÌgono ter menos de 3 lados.");
+        printf("Quantidade de lados inv√°lida, impossivel um pol√≠gono ter menos de 3 lados.");
     } else {
         while(lados > 0) {
             printf("Digite o valor do lado atual: ");
@@ -21,11 +21,11 @@ int main() {
             if (ladoAtual > 0) {
                 perimetro+=ladoAtual;
             } else {
-                printf("Valor do lado inv·lido");
+                printf("Valor do lado inv√°lido");
             }
             lados--;
         }
-        printf("O valor do perÌmetro È de: %f", perimetro);
+        printf("O valor do per√≠metro √© de: %f", perimetro);
     }
 
     return 0;
