@@ -9,10 +9,10 @@ int main() {
     int contador = 0;
 
     do {
-        printf("Digite caracteres do teclado: \n");
+        printf("Digite caracteres do teclado: ");
         opcao = getch();
         contador++;
-    } while(opcao != '$' || contador > 35);
+    } while(opcao != '$' && contador < 35);
 
     return 0;
 }
