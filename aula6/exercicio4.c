@@ -9,9 +9,8 @@ int main() {
     int vogal = 0, consoante = 0;
 
     printf("Digite sua palavra / frase: ");
-    gets(palavra);
-    strlwr(palavra);
-
+    strlwr(gets(palavra));
+    
     for (int i = 0; i < strlen(palavra); i++) {
         if (palavra[i] == 'a' || palavra[i] == 'e' || palavra[i] == 'i' || palavra[i] == 'o' || palavra[i] == 'u') {
             vogal++;
