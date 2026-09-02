@@ -11,7 +11,7 @@ int main() {
         scanf("%f", &valores[i]);
     }
 
-    for (int i = 4; i > 0; i--) {
+    for (int i = 4; i >= 0; i--) {
         printf("Valor: %.2f\n", valores[i]);
     }
 
