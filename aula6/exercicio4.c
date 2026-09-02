@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
 #include <string.h>
-#include <conio.h>
-#include <ctype.h>
 
 int main() {
     setlocale(LC_ALL, "portuguese");
@@ -12,9 +10,10 @@ int main() {
 
     printf("Digite sua palavra / frase: ");
     gets(palavra);
+    strlwr(palavra);
 
     for (int i = 0; i < strlen(palavra); i++) {
-        if (tolower(palavra[i]) == 'a' || tolower(palavra[i]) == 'e' || tolower(palavra[i]) == 'i' || tolower(palavra[i]) == 'o' || tolower(palavra[i]) == 'u') {
+        if (palavra[i] == 'a' || palavra[i] == 'e' || palavra[i] == 'i' || palavra[i] == 'o' || palavra[i] == 'u') {
             vogal++;
         } else {
             consoante++;
