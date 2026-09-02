@@ -8,8 +8,7 @@ int main() {
     setlocale(LC_ALL, "portuguese");
 
     char palavra[255];
-    int vogal = 0;
-    int consoante = 0;
+    int vogal = 0, consoante = 0;
 
     printf("Digite sua palavra / frase: ");
     gets(palavra);
