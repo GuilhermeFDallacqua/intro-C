@@ -1,35 +1,38 @@
 #include <stdio.h>
 #include <string.h>
+#include <locale.h>
 
-typedef struct {
+struct aluno{
     char nome[50];
     char ra[20];
     char cidade[50];
     float media;
-} Aluno;
+};
 
 int main() {
-    Aluno alunos[3];
+    setlocale(LC_ALL, "portuguese");
+    
+    struct aluno a1, a2, a3;
     float maior_media;
 
-    for (int i = 0; i < 3; i++) {
+    for (int i = 1; i <= 3; i++) {
         printf("--- Dados do Aluno %d ---\n", i + 1);
         printf("Nome: ");
-        scanf("%49s", alunos[i].nome);
+        scanf("%49s", a[i].nome);
         printf("RA: ");
-        scanf("%19s", alunos[i].ra);
+        scanf("%19s", a[i].ra);
         printf("Cidade: ");
-        scanf("%49s", alunos[i].cidade);
+        scanf("%49s", a[i].cidade);
         printf("Media: ");
-        scanf("%f", &alunos[i].media);
+        scanf("%f", &a[i].media);
         printf("\n");
     }
 
     printf("Alunos que moram em Marilia:\n");
     int encontrou_marilia = 0;
-    for (int i = 0; i < 3; i++) {
-        if (strcmp(alunos[i].cidade, "Marilia") == 0 || strcmp(alunos[i].cidade, "Marília") == 0) {
-            printf("- %s\n", alunos[i].nome);
+    for (int i = 1; i <= 3; i++) {
+        if (strcmp(a[i].cidade, "Marilia") == 0 || strcmp(a[i].cidade, "MarÃ­lia") == 0) {
+            printf("- %s\n", a[i].nome);
             encontrou_marilia = 1;
         }
     }
