@@ -2,47 +2,55 @@
 #include <locale.h>
 
 typedef struct {
-    char nome[20], RA[7];
+    char nome[50], ra[7];
     float media;
-} t_alunos;
+} Aluno;
 
 int main() {
     setlocale(LC_ALL, "portuguese");
 
-    t_alunos aluno[10];
-    int mediaMaior[5], mediaMenor[5], maior, menor;
+    Aluno alunos[10];
+    Aluno temp;
+    int i, j;
 
-    for (int i = 0; i < 10; i++) {
-        printf("Digite o nome do aluno: ");
-        gets(aluno[i].nome);
-        printf("Digite o RA do aluno: ");
-        gets(aluno[i].RA);
-        printf("Digite a média do aluno: ");
-        scanf("%f", &aluno[i].media);
-        getchar();
+    printf("=== Leitura dos Dados dos %d Alunos ===\n\n", 10);
+
+    for (i = 0; i < 10; i++) {
+        printf("--- Aluno %d ---\n", i + 1);
+
+        printf("Nome: ");
+        gets(alunos[i].nome);
+
+        printf("RA: ");
+        gets(alunos[i].ra);
+
+        printf("Media: ");
+        scanf("%f", &alunos[i].media);
+        printf("\n");
     }
 
-    maior = aluno[0].media;
-    menor = maior;
-
-    for (int i = 1; i < 5; i++) {
-        if (aluno[i].media > maior) {
-            maior = aluno[i].media;
-        } else if (aluno[i].media == 10) {
-            mediaMaior[i] = i;
-        } else if ({
+    for (i = 0; i < 9; i++) {
+        for (j = 0; j < 9 - i; j++) {
+            if (alunos[j].media > alunos[j + 1].media) {
+                temp = alunos[j];
+                alunos[j] = alunos[j + 1];
+                alunos[j + 1] = temp;
+            }
         }
     }
 
-
-    printf("Alunos de maior média:");
-    for (int i = 0; i < 5; i++) {
-        printf("\n%s\n", aluno[mediaMaior[i]].nome);
+    printf("=========================================\n");
+    printf("5 Alunos com a MENOR media (Exibindo RA):\n");
+    printf("=========================================\n");
+    for (i = 0; i < 5; i++) {
+        printf("RA: %d (Media: %.2f)\n", alunos[i].ra, alunos[i].media);
     }
 
-    printf("Alunos de menor média:");
-    for (int i = 0; i < 5; i++) {
-        printf("\n%s\n", aluno[mediaMenor[i]].RA);
+    printf("\n=========================================\n");
+    printf("5 Alunos com a MAIOR media (Exibindo Nome):\n");
+    printf("=========================================\n");
+    for (i = 10 - 5; i < 10; i++) {
+        printf("Nome: %s (Media: %.2f)\n", alunos[i].nome, alunos[i].media);
     }
 
     return 0;
