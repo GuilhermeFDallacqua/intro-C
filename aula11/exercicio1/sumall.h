@@ -1,0 +1,1 @@
+int sumall(int n);
