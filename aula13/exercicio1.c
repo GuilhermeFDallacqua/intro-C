@@ -126,7 +126,7 @@ int main() {
     inicio = inicializar();
 
     do {
-        printf("Insira a opÁ„o que deseja:\n\n[0]Inserir um elemento no inicio da lista.\n[1]Remover um elemento do inicio da lista.\n[2]Exibir lista.\n[3]Inserir elemento no final da lista.\n[4]Remover um elemento no fim da lista.\n[5]Buscar um valor da lista.\n[6]Sair.\n");
+        printf("Insira a op√ß√£o que deseja:\n\n[0]Inserir um elemento no inicio da lista.\n[1]Remover um elemento do inicio da lista.\n[2]Exibir lista.\n[3]Inserir elemento no final da lista.\n[4]Remover um elemento no fim da lista.\n[5]Buscar um valor da lista.\n[6]Sair.\n");
         scanf("%d", &opcao);
         system("cls");
 
@@ -183,9 +183,9 @@ int main() {
                 scanf("%d", &valor);
 
                 if (buscar_valor(inicio, valor) == -1) {
-                    printf("Valor n„o encontrado.\n");
+                    printf("Valor n√£o encontrado.\n");
                 } else {
-                    printf("O Ìndice do valor %d È o %d∞ Ìndice.\n", valor, buscar_valor(inicio, valor));
+                    printf("O √≠ndice do valor %d √© o %d¬∞ √≠ndice.\n", valor, buscar_valor(inicio, valor));
                 }
                 system("pause");
                 system("cls");
@@ -199,15 +199,13 @@ int main() {
                 break;
             }
             default: {
-                printf("OpÁ„o inv·lida.\n");
+                printf("Op√ß√£o inv√°lida.\n");
                 system("pause");
                 system("cls");
                 break;
             }
         }
     } while (opcao != 6);
-
-
 
     return 0;
 }
