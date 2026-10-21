@@ -96,6 +96,10 @@ int buscar_valor(no *inicio, int valor) {
     no *aux = inicio;
     int contador = 0;
 
+    if (inicio == NULL) {
+        return -2
+    }
+
     while (aux != NULL) {
         if (aux->num == valor) {
             return contador;
@@ -184,6 +188,8 @@ int main() {
 
                 if (buscar_valor(inicio, valor) == -1) {
                     printf("Valor não encontrado.\n");
+                } else if(buscar_valor(inicio, valor) == -2) {
+                    printf("Lista vazia.\n");
                 } else {
                     printf("O índice do valor %d é o %d° índice.\n", valor, buscar_valor(inicio, valor));
                 }
