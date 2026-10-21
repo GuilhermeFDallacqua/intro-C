@@ -71,7 +71,7 @@ no* remover_final(no *inicio) {
 
     if (inicio == NULL) {
         printf("Lista vazia.\n");
-        return inicio;
+        return NULL;
     }
 
     if (inicio->prox == NULL) {
