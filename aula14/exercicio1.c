@@ -216,18 +216,16 @@ int main() {
             }
             case 6: {
                 int valor;
-                if (inicio == NULL) {
-                    printf("Lista vazia!\n");
-                } else {
-                    printf("Digite o valor que deseja buscar: ");
-                    scanf("%d", &valor);
+                printf("Digite o valor que deseja buscar: ");
+                scanf("%d", &valor);
 
-                    int resultado = buscar_valor(inicio, valor);
-                    if (resultado == -1) {
-                        printf("Valor não encontrado!\n");
-                    } else {
-                        printf("Valor encontrado no índice %d!\n", resultado);
-                    }
+                int resultado = buscar_valor(inicio, valor);
+                if (resultado == -1) {
+                    printf("Valor não encontrado!\n");
+                } else {
+                    printf("Valor encontrado no índice %d!\n", resultado);
+                    exibe_lista(inicio);
+
                 }
                 system("pause");
                 system("cls");
