@@ -46,8 +46,9 @@ void exibir_lista(no *inicio) {
         aux = aux->prox;
     } while (aux != inicio);
 
-    printf("(volta ao início)\n");
+    printf("(volta ao inÃ­cio)\n");
 }
+
 no* inserir_final(no *inicio, int valor) {
     no *novo, *aux;
     aux = inicio;
@@ -93,7 +94,7 @@ no* inserir_loop(no *inicio, int valor) {
 
 void verificar_se_tem_loop(no *inicio) {
     if (inicio == NULL || inicio->prox == NULL) {
-        printf("Não é um loop\n");
+        printf("NÃ£o Ã© um loop\n");
         return;
     }
 
@@ -101,16 +102,16 @@ void verificar_se_tem_loop(no *inicio) {
     no *speed = inicio;
 
     while (speed != NULL && speed->prox != NULL) {
-        slow = slow->prox;         // A tartaruga anda 1 passo
-        speed = speed->prox->prox; // A lebre anda 2 passos
+        slow = slow->prox;         
+        speed = speed->prox->prox;
 
         if (slow == speed) {
-            printf("É um loop\n");
+            printf("Ã‰ um loop\n");
             return;
         }
     }
 
-    printf("Não é um loop\n");
+    printf("NÃ£o Ã© um loop\n");
 }
 
 void liberar_memoria(no *inicio) {
