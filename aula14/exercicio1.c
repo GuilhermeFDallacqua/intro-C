@@ -47,7 +47,8 @@ no *remove_inicio(no *inicio) {
 
 void exibe_lista(no *inicio) {
     no *aux = inicio;
-
+    
+    printf("NULL <=> ");
     while (aux != NULL) {
         printf("%d <=> ", aux->info);
         aux = aux->prox;
@@ -59,17 +60,23 @@ void exibir_lista_invertida(no *inicio) {
     no *aux;
     aux = inicio;
 
+    if (inicio == NULL) {
+        printf("Lista vazia!\n");
+    }
+
     while(aux->prox != NULL) {
         aux = aux->prox;
     }
 
+    printf("NULL <=> ");
     while (aux != NULL) {
         printf("%d <=> ", aux->info);
         aux = aux->ant;
     }
-
+    
     printf("NULL \n");
 }
+
 
 no* insere_fim(no *inicio, int valor) {
     no *novo, *aux;
@@ -135,7 +142,7 @@ int buscar_valor(no *inicio, int valor) {
         i++;
     }
 
-    printf("Valor n„o encontrado!");
+    printf("Valor n√£o encontrado!");
     return -1;
 }
 
@@ -158,7 +165,7 @@ int main() {
     inicio = inicializar();
 
     do {
-        printf("Insira a opÁ„o que deseja:\n\n[0]Inserir um elemento no inicio da lista.\n[1]Remover um elemento do inicio da lista.\n[2]Exibir lista.\n[3]Exibir a lista invertida.\n[4]Inserir elemento no final da lista.\n[5]Remover um elemento no fim da lista.\n[6]Buscar um valor da lista.\n[7]Sair.\n");
+        printf("Insira a op√ß√£o que deseja:\n\n[0]Inserir um elemento no inicio da lista.\n[1]Remover um elemento do inicio da lista.\n[2]Exibir lista.\n[3]Exibir a lista invertida.\n[4]Inserir elemento no final da lista.\n[5]Remover um elemento no fim da lista.\n[6]Buscar um valor da lista.\n[7]Sair.\n");
         scanf("%d", &opcao);
         system("cls");
 
@@ -217,9 +224,9 @@ int main() {
 
                     int resultado = buscar_valor(inicio, valor);
                     if (resultado == -1) {
-                        printf("Valor n„o encontrado!\n");
+                        printf("Valor n√£o encontrado!\n");
                     } else {
-                        printf("Valor encontrado no Ìndice %d!\n", resultado);
+                        printf("Valor encontrado no √≠ndice %d!\n", resultado);
                     }
                 }
                 system("pause");
@@ -227,14 +234,14 @@ int main() {
                 break;
             }
             case 7: {
-                printf("Saindo do sistema e liberando memÛria...\n");
+                printf("Saindo do sistema e liberando mem√≥ria...\n");
                 liberar_memoria(inicio);
                 system("pause");
                 system("cls");
                 break;
             }
             default: {
-                printf("OpÁ„o inv·lida.\n");
+                printf("Op√ß√£o inv√°lida.\n");
                 system("pause");
                 system("cls");
                 break;
