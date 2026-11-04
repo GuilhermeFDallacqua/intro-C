@@ -20,7 +20,7 @@ int expo(int a, int b) {
 int main() {
     setlocale(LC_ALL, "portuguese");
 
-    printf("%d", expo(2, 30));
+    printf("%d", expo(2, 3));
 
     return 0;
 }
