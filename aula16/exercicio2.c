@@ -8,7 +8,7 @@ int expo(int a, int b) {
         return 1;
     }
 
-    return a * expo_b(a, b - 1);
+    return a * expo(a, b - 1);
 }
 
 int main() {
