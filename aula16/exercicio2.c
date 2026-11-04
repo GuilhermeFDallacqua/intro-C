@@ -2,9 +2,7 @@
 #include <locale.h>
 
 int expo(int a, int b) {
-    if (a == 0) {
-        return 0;
-    } else if (a == 1) {
+    if (a == 1) {
         return 1;
     }
     
